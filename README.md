@@ -41,25 +41,25 @@ This repository aims to solve those problems by providing:
 # 🚀 Learning Roadmap
 
 ```text
-                 START
+                  START
                     │
                     ▼
-        Creational Patterns
+            Creational Patterns
                     │
                     ▼
-        Structural Patterns
+            Structural Patterns
                     │
                     ▼
-        Behavioral Patterns
+            Behavioral Patterns
                     │
                     ▼
-        Pattern Comparisons
+            Pattern Comparisons
                     │
                     ▼
-       Build Mini Projects
+            Build Mini Projects
                     │
                     ▼
-            Crack Interviews
+          Master Design Patterns
 ```
 
 ---
