@@ -47,50 +47,6 @@ This repository aims to solve those problems by providing:
 
 ---
 
-# 📖 Repository Structure
-
-```text
-design-patterns-for-all/
-│
-├── README.md
-│
-├── creational/
-│   ├── simple-factory.md
-│   ├── factory-method.md
-│   ├── abstract-factory.md
-│   ├── builder.md
-│   ├── prototype.md
-│   └── singleton.md
-│
-├── structural/
-│   ├── adapter.md
-│   ├── bridge.md
-│   ├── composite.md
-│   ├── decorator.md
-│   ├── facade.md
-│   ├── flyweight.md
-│   └── proxy.md
-│
-├── behavioral/
-│   ├── chain-of-responsibility.md
-│   ├── command.md
-│   ├── iterator.md
-│   ├── mediator.md
-│   ├── memento.md
-│   ├── observer.md
-│   ├── visitor.md
-│   ├── strategy.md
-│   ├── state.md
-│   └── template-method.md
-│
-└── assets/
-    ├── uml/
-    ├── diagrams/
-    └── images/
-```
-
----
-
 # 🚀 Learning Roadmap
 
 ```text
@@ -290,6 +246,49 @@ Every markdown file in this repository follows the same structure.
 
 ---
 
+# 📖 Repository Structure
+
+```text
+design-patterns-for-all/
+│
+├── README.md
+│
+├── creational/
+│   ├── simple-factory.md
+│   ├── factory-method.md
+│   ├── abstract-factory.md
+│   ├── builder.md
+│   ├── prototype.md
+│   └── singleton.md
+│
+├── structural/
+│   ├── adapter.md
+│   ├── bridge.md
+│   ├── composite.md
+│   ├── decorator.md
+│   ├── facade.md
+│   ├── flyweight.md
+│   └── proxy.md
+│
+├── behavioral/
+│   ├── chain-of-responsibility.md
+│   ├── command.md
+│   ├── iterator.md
+│   ├── mediator.md
+│   ├── memento.md
+│   ├── observer.md
+│   ├── visitor.md
+│   ├── strategy.md
+│   ├── state.md
+│   └── template-method.md
+│
+└── assets/
+    ├── uml/
+    ├── diagrams/
+    └── images/
+```
+
+---
 # 🤝 Contributing
 
 Contributions are always welcome.
