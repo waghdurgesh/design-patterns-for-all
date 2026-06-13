@@ -5,15 +5,6 @@
   <img src="./assets/images/banner.png" alt="Design Patterns for All Banner" width="100%" />
 </p>
 
-<p align="center">
-
-![GitHub stars](https://img.shields.io/github/stars/waghdurgesh/design-patterns-for-all?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/waghdurgesh/design-patterns-for-all?style=for-the-badge)
-![GitHub issues](https://img.shields.io/github/issues/waghdurgesh/design-patterns-for-all?style=for-the-badge)
-![License](https://img.shields.io/github/license/waghdurgesh/design-patterns-for-all?style=for-the-badge)
-
-</p>
-
 > ## 📚 Learn • Understand • Apply • Master
 >
 > A community-driven, beginner-friendly, interview-focused, and production-ready handbook to master **Software Design Patterns** with real-world examples, practical implementations, UML diagrams, and memory tricks.
@@ -324,6 +315,15 @@ Please create an issue before submitting large changes.
 ---
 
 # ⭐ Support the Project
+
+<p align="center">
+
+![GitHub stars](https://img.shields.io/github/stars/waghdurgesh/design-patterns-for-all?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/waghdurgesh/design-patterns-for-all?style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/waghdurgesh/design-patterns-for-all?style=for-the-badge)
+![License](https://img.shields.io/github/license/waghdurgesh/design-patterns-for-all?style=for-the-badge)
+
+</p>
 
 If this repository helped you learn something new,
 
