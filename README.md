@@ -119,7 +119,7 @@ design-patterns-for-all/
 
 # 🏗️ Creational Design Patterns
 
-These patterns deal with **object creation mechanisms**.
+Creational Design Patterns deal with **object creation mechanisms**. They abstract the instantiation process, making a system independent of how its objects are created, composed, and represented. These patterns improve flexibility, reduce code duplication, and promote loose coupling by delegating the responsibility of object creation.
 
 | Pattern | Description |
 |----------|-------------|
@@ -134,7 +134,7 @@ These patterns deal with **object creation mechanisms**.
 
 # 🏛️ Structural Design Patterns
 
-These patterns explain **how classes and objects are composed**.
+Structural Design Patterns deal with **the composition of classes and objects**. They help build larger and more maintainable systems by defining efficient ways to combine objects and classes while keeping the design simple, flexible, and easy to extend without modifying existing code.
 
 | Pattern | Description |
 |----------|-------------|
@@ -150,7 +150,7 @@ These patterns explain **how classes and objects are composed**.
 
 # 🤝 Behavioral Design Patterns
 
-These patterns define **communication between objects**.
+Behavioral Design Patterns deal with **communication and interaction between objects**. They define how objects collaborate, share responsibilities, and exchange information to achieve complex behavior while maintaining loose coupling and improving the overall maintainability of the system.
 
 | Pattern | Description |
 |----------|-------------|
