@@ -297,8 +297,6 @@ You can contribute by:
 
 - Improving explanations
 - Adding diagrams
-- Adding Java examples
-- Adding JavaScript examples
 - Adding C# examples
 - Adding Go examples
 - Fixing typos
@@ -313,8 +311,6 @@ Please create an issue before submitting large changes.
 # 💡 Future Roadmap
 
 - [ ] Mermaid UML diagrams
-- [ ] Java implementations
-- [ ] JavaScript implementations
 - [ ] Python implementations
 - [ ] C# implementations
 - [ ] Go implementations
