@@ -41,25 +41,25 @@ This repository aims to solve those problems by providing:
 # 🚀 Learning Roadmap
 
 ```text
-                 START
+                  START
                     │
                     ▼
-        Creational Patterns
+            Creational Patterns
                     │
                     ▼
-        Structural Patterns
+            Structural Patterns
                     │
                     ▼
-        Behavioral Patterns
+            Behavioral Patterns
                     │
                     ▼
-        Pattern Comparisons
+            Pattern Comparisons
                     │
                     ▼
-       Build Mini Projects
+            Build Mini Projects
                     │
                     ▼
-            Crack Interviews
+          Master Design Patterns
 ```
 
 ---
@@ -126,64 +126,64 @@ Factory Method
 Abstract Factory
       │
       ▼
-Builder
+   Builder
       │
       ▼
-Prototype
+  Prototype
       │
       ▼
-Singleton
+  Singleton
       │
       ▼
-Adapter
+   Adapter
       │
       ▼
-Decorator
+  Decorator
       │
       ▼
-Facade
+   Facade
       │
       ▼
-Proxy
+    Proxy
       │
       ▼
-Composite
+  Composite
       │
       ▼
-Bridge
+   Bridge
       │
       ▼
-Flyweight
+  Flyweight
       │
       ▼
-Strategy
+  Strategy
       │
       ▼
-Observer
+  Observer
       │
       ▼
-Command
+   Command
       │
       ▼
-State
+    State
       │
       ▼
 Template Method
       │
       ▼
-Mediator
+   Mediator
       │
       ▼
 Chain of Responsibility
       │
       ▼
-Iterator
+   Iterator
       │
       ▼
-Memento
+   Memento
       │
       ▼
-Visitor
+   Visitor
 ```
 
 ---
@@ -274,10 +274,14 @@ design-patterns-for-all/
 │   └── template-method.md
 │
 └── assets/
-    ├── uml/
-    ├── diagrams/
+    ├── docs/
     └── images/
+    
 ```
+---
+# 📚 Docs
+
+- [What is GoF (Gang of Four) Design Patterns?](assets/docs/What_is_GoF_Design_Patterns.md)
 
 ---
 # 🤝 Contributing
