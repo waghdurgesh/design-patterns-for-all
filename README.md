@@ -64,6 +64,16 @@ This repository aims to solve those problems by providing:
 
 ---
 
+# 📚 Pattern Categories at a Glance
+
+| Category | Goal |
+|-----------|------|
+| 🏗️ Creational | Create objects efficiently |
+| 🏛️ Structural | Organize relationships between objects |
+| 🤝 Behavioral | Define communication and responsibilities |
+
+---
+
 # 🏗️ Creational Design Patterns
 
 Creational Design Patterns deal with **object creation mechanisms**. They abstract the instantiation process, making a system independent of how its objects are created, composed, and represented. These patterns improve flexibility, reduce code duplication, and promote loose coupling by delegating the responsibility of object creation.
@@ -113,7 +123,11 @@ Behavioral Design Patterns deal with **communication and interaction between obj
 | 📒 [Template Method](./behavioral/template-method.md) | Define algorithm skeleton |
 
 ---
+# 📚 Docs
 
+- [What is GoF (Gang of Four) Design Patterns?](assets/docs/What_is_GoF_Design_Patterns.md)
+
+---
 # 🎓 Recommended Learning Order
 
 ```text
@@ -213,16 +227,6 @@ Every markdown file in this repository follows the same structure.
 
 ---
 
-# 📚 Pattern Categories at a Glance
-
-| Category | Goal |
-|-----------|------|
-| 🏗️ Creational | Create objects efficiently |
-| 🏛️ Structural | Organize relationships between objects |
-| 🤝 Behavioral | Define communication and responsibilities |
-
----
-
 # 🏆 Perfect For
 
 - 👨‍🎓 Students
@@ -279,11 +283,7 @@ design-patterns-for-all/
     
 ```
 ---
-# 📚 Docs
 
-- [What is GoF (Gang of Four) Design Patterns?](assets/docs/What_is_GoF_Design_Patterns.md)
-
----
 # 🤝 Contributing
 
 Contributions are always welcome.
@@ -322,10 +322,11 @@ Please create an issue before submitting large changes.
 
 <p align="center">
 
-![GitHub stars](https://img.shields.io/github/stars/waghdurgesh/design-patterns-for-all?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/waghdurgesh/design-patterns-for-all?style=for-the-badge)
-![GitHub issues](https://img.shields.io/github/issues/waghdurgesh/design-patterns-for-all?style=for-the-badge)
-![License](https://img.shields.io/github/license/waghdurgesh/design-patterns-for-all?style=for-the-badge)
+![License](https://img.shields.io/github/license/waghdurgesh/design-patterns-for-all?)
+![GitHub stars](https://img.shields.io/github/stars/waghdurgesh/design-patterns-for-all?)
+![GitHub forks](https://img.shields.io/github/forks/waghdurgesh/design-patterns-for-all?)
+![GitHub issues](https://img.shields.io/github/issues/waghdurgesh/design-patterns-for-all?)
+
 
 </p>
 
