@@ -305,7 +305,6 @@ Please create an issue before submitting large changes.
 
 # 💡 Future Roadmap
 
-- [ ] Mermaid UML diagrams
 - [ ] Python implementations
 - [ ] C# implementations
 - [ ] Go implementations
