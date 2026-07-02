@@ -206,6 +206,49 @@ vehicle.drive();
 
 ---
 
+## Python Example
+
+```python
+from abc import ABC, abstractmethod
+
+
+class Animal(ABC):
+
+    @abstractmethod
+    def speak(self):
+        pass
+
+
+class Dog(Animal):
+
+    def speak(self):
+        print("Dog says: Woof!")
+
+
+class Cat(Animal):
+
+    def speak(self):
+        print("Cat says: Meow!")
+
+
+class AnimalFactory:
+
+    @staticmethod
+    def create_animal(animal_type: str) -> Animal:
+        if animal_type.lower() == "dog":
+            return Dog()
+        elif animal_type.lower() == "cat":
+            return Cat()
+        else:
+            raise ValueError("Unknown animal type")
+
+
+animal = AnimalFactory.create_animal("dog")
+animal.speak()
+```
+
+---
+
 ## Real Software Example
 
 Simple Factory is commonly used in:
