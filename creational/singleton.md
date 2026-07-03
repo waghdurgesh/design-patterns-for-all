@@ -169,6 +169,32 @@ console.log(obj1 === obj2); // true
 
 ---
 
+## Python Example
+
+```python
+class Singleton:
+    _instance = None
+
+    def __new__(cls):
+        if cls._instance is None:
+            print("Creating Singleton instance...")
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
+    def show_message(self):
+        print("Hello from Singleton!")
+
+
+obj1 = Singleton()
+obj2 = Singleton()
+
+obj1.show_message()
+
+print(obj1 is obj2)  # True
+```
+
+---
+
 ## Real Software Example
 
 Common real-world uses include:
