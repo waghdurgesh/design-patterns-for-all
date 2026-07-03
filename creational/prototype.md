@@ -154,6 +154,36 @@ console.log(copy.model); // Tesla Model X
 
 ---
 
+## Python Example
+
+```python
+import copy
+
+
+class Car:
+
+    def __init__(self, brand: str, color: str):
+        self.brand = brand
+        self.color = color
+
+    def clone(self):
+        return copy.deepcopy(self)
+
+    def __str__(self):
+        return f"{self.brand} ({self.color})"
+
+
+car1 = Car("Tesla", "Red")
+
+car2 = car1.clone()
+car2.color = "Black"
+
+print(car1)
+print(car2)
+```
+
+---
+
 ## Real Software Example
 
 Common real-world uses include:
