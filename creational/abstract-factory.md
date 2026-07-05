@@ -300,6 +300,90 @@ checkbox.check();
 
 ---
 
+## Python Example
+
+```python
+from abc import ABC, abstractmethod
+
+
+class Button(ABC):
+
+    @abstractmethod
+    def render(self):
+        pass
+
+
+class Checkbox(ABC):
+
+    @abstractmethod
+    def render(self):
+        pass
+
+
+class WindowsButton(Button):
+
+    def render(self):
+        print("Windows Button")
+
+
+class WindowsCheckbox(Checkbox):
+
+    def render(self):
+        print("Windows Checkbox")
+
+
+class MacButton(Button):
+
+    def render(self):
+        print("Mac Button")
+
+
+class MacCheckbox(Checkbox):
+
+    def render(self):
+        print("Mac Checkbox")
+
+
+class GUIFactory(ABC):
+
+    @abstractmethod
+    def create_button(self):
+        pass
+
+    @abstractmethod
+    def create_checkbox(self):
+        pass
+
+
+class WindowsFactory(GUIFactory):
+
+    def create_button(self):
+        return WindowsButton()
+
+    def create_checkbox(self):
+        return WindowsCheckbox()
+
+
+class MacFactory(GUIFactory):
+
+    def create_button(self):
+        return MacButton()
+
+    def create_checkbox(self):
+        return MacCheckbox()
+
+
+factory = WindowsFactory()
+
+button = factory.create_button()
+checkbox = factory.create_checkbox()
+
+button.render()
+checkbox.render()
+```
+
+---
+
 ## Real Software Example
 
 Abstract Factory is commonly used in:
