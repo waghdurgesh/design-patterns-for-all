@@ -183,6 +183,40 @@ player.play("song.mp3");
 
 ---
 
+## Python Example
+
+```python
+from abc import ABC, abstractmethod
+
+
+class MediaPlayer(ABC):
+
+    @abstractmethod
+    def play(self, file_name: str):
+        pass
+
+
+class AdvancedMediaPlayer:
+
+    def play_mp4(self, file_name: str):
+        print(f"Playing MP4 file: {file_name}")
+
+
+class MediaAdapter(MediaPlayer):
+
+    def __init__(self):
+        self.advanced_player = AdvancedMediaPlayer()
+
+    def play(self, file_name: str):
+        self.advanced_player.play_mp4(file_name)
+
+
+player = MediaAdapter()
+player.play("movie.mp4")
+```
+
+---
+
 ## Real Software Example
 
 Adapter is commonly used in:
