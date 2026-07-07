@@ -254,7 +254,62 @@ const remote = new Remote(new TV());
 remote.powerOn();
 remote.powerOff();
 ```
+---
 
+## Python Example
+
+```python
+from abc import ABC, abstractmethod
+
+
+class Device(ABC):
+
+    @abstractmethod
+    def turn_on(self):
+        pass
+
+    @abstractmethod
+    def turn_off(self):
+        pass
+
+
+class TV(Device):
+
+    def turn_on(self):
+        print("TV is ON")
+
+    def turn_off(self):
+        print("TV is OFF")
+
+
+class Radio(Device):
+
+    def turn_on(self):
+        print("Radio is ON")
+
+    def turn_off(self):
+        print("Radio is OFF")
+
+
+class RemoteControl:
+
+    def __init__(self, device: Device):
+        self.device = device
+
+    def power_on(self):
+        self.device.turn_on()
+
+    def power_off(self):
+        self.device.turn_off()
+
+
+tv_remote = RemoteControl(TV())
+tv_remote.power_on()
+tv_remote.power_off()
+
+radio_remote = RemoteControl(Radio())
+radio_remote.power_on()
+```
 ---
 
 ## Real Software Example
