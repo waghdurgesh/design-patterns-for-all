@@ -223,6 +223,52 @@ docs.showDetails();
 
 ---
 
+## Python Example
+
+```python
+from abc import ABC, abstractmethod
+
+
+class Employee(ABC):
+
+    @abstractmethod
+    def show_details(self):
+        pass
+
+
+class Developer(Employee):
+
+    def __init__(self, name: str):
+        self.name = name
+
+    def show_details(self):
+        print(f"Developer: {self.name}")
+
+
+class Manager(Employee):
+
+    def __init__(self, name: str):
+        self.name = name
+        self.team = []
+
+    def add(self, employee: Employee):
+        self.team.append(employee)
+
+    def show_details(self):
+        print(f"Manager: {self.name}")
+        for employee in self.team:
+            employee.show_details()
+
+
+manager = Manager("Alice")
+manager.add(Developer("Bob"))
+manager.add(Developer("Charlie"))
+
+manager.show_details()
+```
+
+---
+
 ## Real Software Example
 
 Composite is commonly used in:
