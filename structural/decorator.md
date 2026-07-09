@@ -228,6 +228,52 @@ console.log(coffee.cost());
 
 ---
 
+## Python Example
+
+```python
+from abc import ABC, abstractmethod
+
+
+class Coffee(ABC):
+
+    @abstractmethod
+    def cost(self):
+        pass
+
+
+class SimpleCoffee(Coffee):
+
+    def cost(self):
+        return 100
+
+
+class CoffeeDecorator(Coffee):
+
+    def __init__(self, coffee: Coffee):
+        self.coffee = coffee
+
+
+class MilkDecorator(CoffeeDecorator):
+
+    def cost(self):
+        return self.coffee.cost() + 20
+
+
+class SugarDecorator(CoffeeDecorator):
+
+    def cost(self):
+        return self.coffee.cost() + 10
+
+
+coffee = SimpleCoffee()
+coffee = MilkDecorator(coffee)
+coffee = SugarDecorator(coffee)
+
+print(f"Coffee Cost: ₹{coffee.cost()}")
+```
+
+---
+
 ## Real Software Example
 
 Decorator is commonly used in:
