@@ -242,6 +242,63 @@ teamLead.approve(50000);
 
 ---
 
+## Python Example
+
+```python
+from abc import ABC, abstractmethod
+
+
+class Handler(ABC):
+
+    def __init__(self):
+        self._next_handler = None
+
+    def set_next(self, handler):
+        self._next_handler = handler
+        return handler
+
+    @abstractmethod
+    def handle(self, request: int):
+        pass
+
+
+class Manager(Handler):
+
+    def handle(self, request: int):
+        if request <= 1000:
+            print(f"Manager approved ₹{request}")
+        elif self._next_handler:
+            self._next_handler.handle(request)
+
+
+class Director(Handler):
+
+    def handle(self, request: int):
+        if request <= 5000:
+            print(f"Director approved ₹{request}")
+        elif self._next_handler:
+            self._next_handler.handle(request)
+
+
+class CEO(Handler):
+
+    def handle(self, request: int):
+        print(f"CEO approved ₹{request}")
+
+
+manager = Manager()
+director = Director()
+ceo = CEO()
+
+manager.set_next(director).set_next(ceo)
+
+manager.handle(800)
+manager.handle(3000)
+manager.handle(10000)
+```
+
+---
+
 ## Real Software Example
 
 Chain of Responsibility is commonly used in:
