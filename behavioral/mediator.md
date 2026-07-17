@@ -269,6 +269,61 @@ bob.send("Hi Alice!");
 
 ---
 
+## Python Example
+
+```python
+from abc import ABC, abstractmethod
+
+
+class Mediator(ABC):
+
+    @abstractmethod
+    def send(self, message: str, colleague):
+        pass
+
+
+class ChatMediator(Mediator):
+
+    def __init__(self):
+        self.users = []
+
+    def add_user(self, user):
+        self.users.append(user)
+
+    def send(self, message: str, sender):
+        for user in self.users:
+            if user != sender:
+                user.receive(message)
+
+
+class User:
+
+    def __init__(self, name: str, mediator: ChatMediator):
+        self.name = name
+        self.mediator = mediator
+
+    def send(self, message: str):
+        print(f"{self.name}: {message}")
+        self.mediator.send(message, self)
+
+    def receive(self, message: str):
+        print(f"{self.name} received: {message}")
+
+
+mediator = ChatMediator()
+
+alice = User("Alice", mediator)
+bob = User("Bob", mediator)
+charlie = User("Charlie", mediator)
+
+mediator.add_user(alice)
+mediator.add_user(bob)
+mediator.add_user(charlie)
+
+alice.send("Hello Everyone!")
+```
+---
+
 ## Real Software Example
 
 Mediator is commonly used in:
