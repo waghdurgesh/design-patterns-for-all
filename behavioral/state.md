@@ -216,6 +216,54 @@ player.pressButton();
 
 ---
 
+## Python Example
+
+```python
+from abc import ABC, abstractmethod
+
+
+class State(ABC):
+
+    @abstractmethod
+    def handle(self, player):
+        pass
+
+
+class PlayingState(State):
+
+    def handle(self, player):
+        print("Playing music")
+        player.set_state(PausedState())
+
+
+class PausedState(State):
+
+    def handle(self, player):
+        print("Paused")
+        player.set_state(PlayingState())
+
+
+class MediaPlayer:
+
+    def __init__(self, state: State):
+        self.state = state
+
+    def set_state(self, state: State):
+        self.state = state
+
+    def press_button(self):
+        self.state.handle(self)
+
+
+player = MediaPlayer(PlayingState())
+
+player.press_button()
+
+player.press_button()
+```
+
+---
+
 ## Real Software Example
 
 State is commonly used in:
