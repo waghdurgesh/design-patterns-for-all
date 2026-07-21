@@ -237,6 +237,54 @@ cart.checkout(500);
 
 ---
 
+## Python Example
+
+```python
+from abc import ABC, abstractmethod
+
+
+class PaymentStrategy(ABC):
+
+    @abstractmethod
+    def pay(self, amount: int):
+        pass
+
+
+class CreditCardPayment(PaymentStrategy):
+
+    def pay(self, amount: int):
+        print(f"Paid ₹{amount} using Credit Card")
+
+
+class UpiPayment(PaymentStrategy):
+
+    def pay(self, amount: int):
+        print(f"Paid ₹{amount} using UPI")
+
+
+class ShoppingCart:
+
+    def __init__(self, strategy: PaymentStrategy):
+        self.strategy = strategy
+
+    def set_strategy(self, strategy: PaymentStrategy):
+        self.strategy = strategy
+
+    def checkout(self, amount: int):
+        self.strategy.pay(amount)
+
+
+cart = ShoppingCart(CreditCardPayment())
+
+cart.checkout(2500)
+
+cart.set_strategy(UpiPayment())
+
+cart.checkout(500)
+```
+
+---
+
 ## Real Software Example
 
 Strategy is commonly used in:
