@@ -246,6 +246,62 @@ new Coffee().prepare();
 
 ---
 
+## Python Example
+
+```python
+from abc import ABC, abstractmethod
+
+
+class Beverage(ABC):
+
+    def prepare(self):
+        self.boil_water()
+        self.brew()
+        self.pour_in_cup()
+        self.add_condiments()
+
+    def boil_water(self):
+        print("Boiling water")
+
+    @abstractmethod
+    def brew(self):
+        pass
+
+    def pour_in_cup(self):
+        print("Pouring into cup")
+
+    @abstractmethod
+    def add_condiments(self):
+        pass
+
+
+class Tea(Beverage):
+
+    def brew(self):
+        print("Steeping tea")
+
+    def add_condiments(self):
+        print("Adding lemon")
+
+
+class Coffee(Beverage):
+
+    def brew(self):
+        print("Brewing coffee")
+
+    def add_condiments(self):
+        print("Adding sugar")
+
+
+Tea().prepare()
+
+print()
+
+Coffee().prepare()
+```
+
+---
+
 ## Real Software Example
 
 Template Method is commonly used in:
