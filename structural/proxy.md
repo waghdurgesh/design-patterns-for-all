@@ -224,6 +224,58 @@ image.display();
 
 ---
 
+## Python Example
+
+```python
+from abc import ABC, abstractmethod
+
+
+class Image(ABC):
+
+    @abstractmethod
+    def display(self):
+        pass
+
+
+class RealImage(Image):
+
+    def __init__(self, filename: str):
+        self.filename = filename
+        self.load_from_disk()
+
+    def load_from_disk(self):
+        print(f"Loading {self.filename} from disk...")
+
+    def display(self):
+        print(f"Displaying {self.filename}")
+
+
+class ImageProxy(Image):
+
+    def __init__(self, filename: str):
+        self.filename = filename
+        self.real_image = None
+
+    def display(self):
+        if self.real_image is None:
+            self.real_image = RealImage(self.filename)
+
+        self.real_image.display()
+
+
+image = ImageProxy("photo.jpg")
+
+print("Image created.")
+
+image.display()
+
+print()
+
+image.display()
+```
+
+---
+
 ## Real Software Example
 
 Proxy is commonly used in:

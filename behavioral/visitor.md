@@ -240,6 +240,64 @@ items.forEach(item =>
 
 ---
 
+## Python Example
+
+```python
+from abc import ABC, abstractmethod
+
+
+class Visitor(ABC):
+
+    @abstractmethod
+    def visit_book(self, book):
+        pass
+
+    @abstractmethod
+    def visit_dvd(self, dvd):
+        pass
+
+
+class Item(ABC):
+
+    @abstractmethod
+    def accept(self, visitor: Visitor):
+        pass
+
+
+class Book(Item):
+
+    def accept(self, visitor: Visitor):
+        visitor.visit_book(self)
+
+
+class DVD(Item):
+
+    def accept(self, visitor: Visitor):
+        visitor.visit_dvd(self)
+
+
+class PriceVisitor(Visitor):
+
+    def visit_book(self, book):
+        print("Book Price: ₹500")
+
+    def visit_dvd(self, dvd):
+        print("DVD Price: ₹300")
+
+
+visitor = PriceVisitor()
+
+items = [
+    Book(),
+    DVD(),
+]
+
+for item in items:
+    item.accept(visitor)
+```
+
+---
+
 ## Real Software Example
 
 Visitor is commonly used in:

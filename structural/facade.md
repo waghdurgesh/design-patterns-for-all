@@ -207,6 +207,54 @@ computer.startComputer();
 
 ---
 
+## Python Example
+
+```python
+class CPU:
+
+    def freeze(self):
+        print("CPU: Freezing processor")
+
+    def jump(self):
+        print("CPU: Jumping to boot address")
+
+    def execute(self):
+        print("CPU: Executing instructions")
+
+
+class Memory:
+
+    def load(self):
+        print("Memory: Loading data into memory")
+
+
+class HardDrive:
+
+    def read(self):
+        print("Hard Drive: Reading boot sector")
+
+
+class ComputerFacade:
+
+    def __init__(self):
+        self.cpu = CPU()
+        self.memory = Memory()
+        self.hard_drive = HardDrive()
+
+    def start(self):
+        self.cpu.freeze()
+        self.hard_drive.read()
+        self.memory.load()
+        self.cpu.jump()
+        self.cpu.execute()
+
+
+computer = ComputerFacade()
+computer.start()
+```
+
+---
+
 ## Real Software Example
 
 Facade is commonly used in:

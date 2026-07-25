@@ -251,6 +251,57 @@ channel.publishNews(
 
 ---
 
+## Python Example
+
+```python
+from abc import ABC, abstractmethod
+
+
+class Observer(ABC):
+
+    @abstractmethod
+    def update(self, message: str):
+        pass
+
+
+class Subscriber(Observer):
+
+    def __init__(self, name: str):
+        self.name = name
+
+    def update(self, message: str):
+        print(f"{self.name} received: {message}")
+
+
+class NewsChannel:
+
+    def __init__(self):
+        self._observers = []
+
+    def subscribe(self, observer: Observer):
+        self._observers.append(observer)
+
+    def unsubscribe(self, observer: Observer):
+        self._observers.remove(observer)
+
+    def publish(self, news: str):
+        for observer in self._observers:
+            observer.update(news)
+
+
+channel = NewsChannel()
+
+alice = Subscriber("Alice")
+bob = Subscriber("Bob")
+
+channel.subscribe(alice)
+channel.subscribe(bob)
+
+channel.publish("New Design Pattern Article!")
+```
+
+---
+
 ## Real Software Example
 
 Observer is commonly used in:

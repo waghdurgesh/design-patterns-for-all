@@ -222,7 +222,58 @@ const user = new UserBuilder()
 
 console.log(user);
 ```
+---
 
+## Python Example
+
+```python
+class House:
+
+    def __init__(self):
+        self.walls = False
+        self.roof = False
+        self.garage = False
+
+    def __str__(self):
+        return (
+            f"House("
+            f"walls={self.walls}, "
+            f"roof={self.roof}, "
+            f"garage={self.garage})"
+        )
+
+
+class HouseBuilder:
+
+    def __init__(self):
+        self.house = House()
+
+    def build_walls(self):
+        self.house.walls = True
+        return self
+
+    def build_roof(self):
+        self.house.roof = True
+        return self
+
+    def build_garage(self):
+        self.house.garage = True
+        return self
+
+    def build(self):
+        return self.house
+
+
+house = (
+    HouseBuilder()
+    .build_walls()
+    .build_roof()
+    .build_garage()
+    .build()
+)
+
+print(house)
+```
 ---
 
 ## Real Software Example

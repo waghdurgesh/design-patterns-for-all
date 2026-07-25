@@ -223,6 +223,63 @@ dialog.renderWindow();
 
 ---
 
+## Python Example
+
+```python
+from abc import ABC, abstractmethod
+
+
+class Transport(ABC):
+
+    @abstractmethod
+    def deliver(self):
+        pass
+
+
+class Truck(Transport):
+
+    def deliver(self):
+        print("Delivering by Truck")
+
+
+class Ship(Transport):
+
+    def deliver(self):
+        print("Delivering by Ship")
+
+
+class Logistics(ABC):
+
+    @abstractmethod
+    def create_transport(self) -> Transport:
+        pass
+
+    def plan_delivery(self):
+        transport = self.create_transport()
+        transport.deliver()
+
+
+class RoadLogistics(Logistics):
+
+    def create_transport(self):
+        return Truck()
+
+
+class SeaLogistics(Logistics):
+
+    def create_transport(self):
+        return Ship()
+
+
+road = RoadLogistics()
+road.plan_delivery()
+
+sea = SeaLogistics()
+sea.plan_delivery()
+```
+
+---
+
 ## Real Software Example
 
 Factory Method is widely used in:

@@ -209,6 +209,50 @@ for (const name of ["Alice", "Bob", "Charlie"]) {
 
 ---
 
+## Python Example
+
+```python
+class NameIterator:
+
+    def __init__(self, names):
+        self.names = names
+        self.index = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.index < len(self.names):
+            name = self.names[self.index]
+            self.index += 1
+            return name
+        raise StopIteration
+
+
+class NameCollection:
+
+    def __init__(self):
+        self.names = []
+
+    def add(self, name: str):
+        self.names.append(name)
+
+    def __iter__(self):
+        return NameIterator(self.names)
+
+
+collection = NameCollection()
+
+collection.add("Alice")
+collection.add("Bob")
+collection.add("Charlie")
+
+for name in collection:
+    print(name)
+```
+
+---
+
 ## Real Software Example
 
 Iterator is commonly used in:

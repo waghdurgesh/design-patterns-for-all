@@ -218,6 +218,57 @@ a2.display(20);
 
 ---
 
+## Python Example
+
+```python
+class TreeType:
+
+    def __init__(self, name: str, color: str):
+        self.name = name
+        self.color = color
+
+    def display(self, x: int, y: int):
+        print(f"{self.color} {self.name} at ({x}, {y})")
+
+
+class TreeFactory:
+
+    _tree_types = {}
+
+    @classmethod
+    def get_tree_type(cls, name: str, color: str):
+        key = (name, color)
+
+        if key not in cls._tree_types:
+            cls._tree_types[key] = TreeType(name, color)
+
+        return cls._tree_types[key]
+
+
+class Tree:
+
+    def __init__(self, x: int, y: int, tree_type: TreeType):
+        self.x = x
+        self.y = y
+        self.tree_type = tree_type
+
+    def display(self):
+        self.tree_type.display(self.x, self.y)
+
+
+oak = TreeFactory.get_tree_type("Oak", "Green")
+
+tree1 = Tree(10, 20, oak)
+tree2 = Tree(50, 80, oak)
+
+tree1.display()
+tree2.display()
+
+print(tree1.tree_type is tree2.tree_type)  # True
+```
+
+---
+
 ## Real Software Example
 
 Flyweight is commonly used in:

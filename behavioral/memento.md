@@ -248,6 +248,54 @@ editor.print();
 
 ---
 
+## Python Example
+
+```python
+class EditorMemento:
+
+    def __init__(self, content: str):
+        self._content = content
+
+    @property
+    def content(self):
+        return self._content
+
+
+class TextEditor:
+
+    def __init__(self):
+        self.content = ""
+
+    def write(self, content: str):
+        self.content = content
+
+    def save(self):
+        return EditorMemento(self.content)
+
+    def restore(self, memento: EditorMemento):
+        self.content = memento.content
+
+    def show(self):
+        print(self.content)
+
+
+editor = TextEditor()
+
+editor.write("Version 1")
+
+save_point = editor.save()
+
+editor.write("Version 2")
+
+editor.show()
+
+editor.restore(save_point)
+
+editor.show()
+```
+
+---
+
 ## Real Software Example
 
 Memento is commonly used in:

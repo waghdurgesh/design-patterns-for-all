@@ -232,6 +232,62 @@ remote.pressButton();
 
 ---
 
+## Python Example
+
+```python
+from abc import ABC, abstractmethod
+
+
+class Light:
+
+    def turn_on(self):
+        print("Light is ON")
+
+    def turn_off(self):
+        print("Light is OFF")
+
+
+class Command(ABC):
+
+    @abstractmethod
+    def execute(self):
+        pass
+
+
+class TurnOnCommand(Command):
+
+    def __init__(self, light: Light):
+        self.light = light
+
+    def execute(self):
+        self.light.turn_on()
+
+
+class TurnOffCommand(Command):
+
+    def __init__(self, light: Light):
+        self.light = light
+
+    def execute(self):
+        self.light.turn_off()
+
+
+class RemoteControl:
+
+    def submit(self, command: Command):
+        command.execute()
+
+
+light = Light()
+
+remote = RemoteControl()
+
+remote.submit(TurnOnCommand(light))
+remote.submit(TurnOffCommand(light))
+```
+
+---
+
 ## Real Software Example
 
 Command is commonly used in:
